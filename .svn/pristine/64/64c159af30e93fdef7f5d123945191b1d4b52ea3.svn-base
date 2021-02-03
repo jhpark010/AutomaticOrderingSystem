@@ -1,0 +1,439 @@
+# Created at 2020-12-15T10:14:43.531
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2020-12-15T10:14:43.605
+Unexpected IOException with stream: 10:14:43.603 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.aos.tray.TrayApplicationTests]
+
+
+# Created at 2020-12-15T10:14:43.929
+Unexpected IOException with stream: 10:14:43.928 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\workspace\tray\target\classes\com\aos\tray\TrayApplication.class]
+
+
+# Created at 2020-12-15T10:14:43.932
+Unexpected IOException with stream: 10:14:43.931 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.aos.tray.TrayApplication for test class com.aos.tray.TrayApplicationTests
+
+
+# Created at 2020-12-15T10:14:44.386
+Unexpected IOException with stream: 10:14:44.385 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.aos.tray.TrayApplicationTests]: using defaults.
+
+
+# Created at 2020-12-15T10:14:44.390
+Unexpected IOException with stream: 10:14:44.389 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+
+
+# Created at 2020-12-15T10:14:44.436
+Unexpected IOException with stream: 10:14:44.435 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@655ef322, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7e276594, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3401a114, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5066d65f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4233e892, org.springframework.test.context.transaction.TransactionalTestExecutionListener@77d2e85, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ecd267f, org.springframework.test.context.event.EventPublishingTestExecutionListener@58ffcbd7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@555cf22, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6bb2d00b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c9bfddc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a9c38eb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@319bc845, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4c5474f5]
+
+
+# Created at 2020-12-15T10:14:44.454
+Unexpected IOException with stream: 10:14:44.452 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@37ddb69a testClass = TrayApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@349c1daf testClass = TrayApplicationTests, locations = '{}', classes = '{class com.aos.tray.TrayApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@70e38ce1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1ebea008, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@15f47664, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@57a3e26a, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@3eb91815, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2205a05d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@63355449], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+
+# Created at 2020-12-15T10:14:44.702
+Unexpected IOException with stream: 10:14:44.701 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+
+# Created at 2020-12-15T10:14:45.625
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T10:14:45.629
+Unexpected IOException with stream:   .   ____          _            __ _ _
+
+
+# Created at 2020-12-15T10:14:45.631
+Unexpected IOException with stream:  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+
+
+# Created at 2020-12-15T10:14:45.635
+Unexpected IOException with stream: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+
+
+# Created at 2020-12-15T10:14:45.640
+Unexpected IOException with stream:  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+
+
+# Created at 2020-12-15T10:14:45.662
+Unexpected IOException with stream:   '  |____| .__|_| |_|_| |_\__, | / / / /
+
+
+# Created at 2020-12-15T10:14:45.667
+Unexpected IOException with stream:  =========|_|==============|___/=/_/_/_/
+
+
+# Created at 2020-12-15T10:14:45.674
+Unexpected IOException with stream:  :: Spring Boot ::                (v2.4.0)
+
+
+# Created at 2020-12-15T10:14:45.677
+Unexpected IOException with stream: 
+
+
+# Created at 2020-12-15T10:14:45.922
+Unexpected IOException with stream: 2020-12-15 10:14:45.911  INFO 10900 --- [           main] com.aos.tray.TrayApplicationTests        : Starting TrayApplicationTests using Java 11.0.9.1 on DESKTOP-3UI4N0B with PID 10900 (started by jsin1 in D:\workspace\tray)
+
+
+# Created at 2020-12-15T10:14:45.931
+Unexpected IOException with stream: 2020-12-15 10:14:45.930  INFO 10900 --- [           main] com.aos.tray.TrayApplicationTests        : No active profile set, falling back to default profiles: default
+
+
+# Created at 2020-12-15T10:14:47.165
+Unexpected IOException with stream: 2020-12-15 10:14:47.162  WARN 10900 --- [kground-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+
+
+# Created at 2020-12-15T10:14:49.517
+Unexpected IOException with stream: 2020-12-15 10:14:49.516  WARN 10900 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.aos.tray]' package. Please check your configuration.
+
+
+# Created at 2020-12-15T10:14:53.803
+Unexpected IOException with stream: 2020-12-15 10:14:53.801  INFO 10900 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+
+
+# Created at 2020-12-15T10:14:55.853
+Unexpected IOException with stream: 2020-12-15 10:14:55.852  INFO 10900 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+
+
+# Created at 2020-12-15T10:14:56.076
+Unexpected IOException with stream: 2020-12-15 10:14:56.074  INFO 10900 --- [           main] com.aos.tray.TrayApplicationTests        : Started TrayApplicationTests in 11.336 seconds (JVM running for 15.12)
+
+
+# Created at 2020-12-15T10:14:56.128
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:14:56.132
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:14:56.182
+Unexpected IOException: 5,1,com.aos.tray.TrayApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2020-12-15T10:14:56.235
+Unexpected IOException with stream: 2020-12-15 10:14:56.233 ERROR 10900 --- [   scheduling-1] com.pi4j.util.NativeLibraryLoader        : Unable to load [libpi4j.so] using path: [/lib/raspberrypi/dynamic/libpi4j.so]
+
+java.lang.IllegalArgumentException: The path has to be absolute, but found: \lib\raspberrypi\dynamic\libpi4j.so
+	at com.pi4j.util.NativeLibraryLoader.loadLibraryFromClasspath(NativeLibraryLoader.java:136) ~[pi4j-core-1.2.jar:na]
+	at com.pi4j.util.NativeLibraryLoader.load(NativeLibraryLoader.java:105) ~[pi4j-core-1.2.jar:na]
+	at com.pi4j.wiringpi.Gpio.<clinit>(Gpio.java:189) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:14:56.238
+Unexpected IOException with stream: 2020-12-15 10:14:56.236 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:14:57.689
+Unexpected IOException: 6,1,com.aos.tray.TrayApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2020-12-15T10:14:57.696
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.aos.tray.TrayApplicationTests,null,null,null
+
+
+# Created at 2020-12-15T10:15:01.241
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:15:01.242
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:15:01.245
+Unexpected IOException with stream: 2020-12-15 10:15:01.243 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:15:06.249
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:15:06.250
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:15:06.252
+Unexpected IOException with stream: 2020-12-15 10:15:06.251 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:15:11.254
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:15:11.255
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:15:11.257
+Unexpected IOException with stream: 2020-12-15 10:15:11.255 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:15:16.261
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:15:16.261
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:15:16.263
+Unexpected IOException with stream: 2020-12-15 10:15:16.262 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:15:21.267
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:15:21.275
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:15:21.278
+Unexpected IOException with stream: 2020-12-15 10:15:21.276 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
+# Created at 2020-12-15T10:15:26.280
+Unexpected IOException with stream: -------------------------------------
+
+
+# Created at 2020-12-15T10:15:26.283
+Unexpected IOException with stream: Running
+
+
+# Created at 2020-12-15T10:15:26.288
+Unexpected IOException with stream: 2020-12-15 10:15:26.285 ERROR 10900 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.UnsatisfiedLinkError: 'int com.pi4j.wiringpi.Gpio.wiringPiSetupGpio()'
+	at com.pi4j.wiringpi.Gpio.wiringPiSetupGpio(Native Method) ~[pi4j-core-1.2.jar:na]
+	at com.aos.tray.agent.LoadCell.getValue(LoadCell.java:22) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl.getWeight(TrayRepositoryImpl.java:29) ~[classes/:na]
+	at com.aos.tray.agent.TrayRepositoryImpl$$FastClassBySpringCGLIB$$254de36b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.3.1.jar:5.3.1]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.3.1.jar:5.3.1]
+	at com.aos.tray.agent.TrayRepositoryImpl$$EnhancerBySpringCGLIB$$46e52c82.getWeight(<generated>) ~[classes/:na]
+	at com.aos.tray.agent.TrayServiceImpl.isOrder(TrayServiceImpl.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.1.jar:5.3.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.1.jar:5.3.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+
+
