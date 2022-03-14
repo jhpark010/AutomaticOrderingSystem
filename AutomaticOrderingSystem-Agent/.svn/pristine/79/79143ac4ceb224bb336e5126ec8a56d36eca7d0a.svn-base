@@ -1,0 +1,13 @@
+server.port=8080
+
+tray.no=1
+
+zeroing.value=8279780
+sensor.sck=16
+sensor.dt=20
+server.url=http://192.168.0.184:80/aos/incomeorderweight
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/aos?serverTimezone=UTC
+spring.datasource.username=mybatis
+spring.datasource.password=mybatis$
