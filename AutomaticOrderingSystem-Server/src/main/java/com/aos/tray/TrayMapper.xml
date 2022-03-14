@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aos.tray.TrayMapper">
+    <resultMap id="trayResultMap" type="com.aos.tray.Tray">
+        <result column="NO" property="no" />
+        <result column="INGREDIENT_NO" property="ingredientNo" />
+        <result column="ORDER_WEIGHT" property="orderWeight" />
+        <result column="ORDER_AMOUNT" property="orderAmount" />
+        <result column="ZERO_VALUE" property="zeroValue" />
+    </resultMap>
+    
+    <resultMap id="trayInfoResultMap" type="com.aos.tray.TrayInfo">
+    	<result column="NO" property="no" />
+    	<result column="INGREDIENT_NAME" property="ingredientName" />
+    	<result column="ORDER_WEIGHT" property="orderWeight" />
+    	<result column="ORDER_AMOUNT" property="orderAmount" />
+    	<result column="ZERO_VALUE" property="zeroValue" />
+    </resultMap>
+
+    <sql id="whereSql">
+        <where>
+            <if test="no != null and no != ''">
+                AND NO = #{no}
+            </if>
+            <if test="ingredientNo != null and ingredientNo != ''">
+                AND INGREDIENT_NO = #{ingredientNo}
+            </if>
+            <if test="orderWeight != null and orderWeight != ''">
+                AND ORDER_WEIGHT = #{orderWeight}
+            </if>
+            <if test="orderAmount != null and orderAmount != ''">
+                AND ORDER_AMOUNT = #{orderAmount}
+            </if>
+            <if test="zeroValue != null and zeroValue != ''">
+            	AND ZERO_VALUE = #{zeroValue}
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectTrayNo" resultMap="trayResultMap">
+    	SELECT NO
+    	FROM TRAY
+    	WHERE INGREDIENT_NO IS NULL
+    </select>
+
+    <select id="list" parameterType="com.aos.tray.Tray" resultMap="trayResultMap">
+        SELECT *
+        FROM (
+            SELECT
+                NO,
+                INGREDIENT_NO,
+                ORDER_WEIGHT,
+                ORDER_AMOUNT,
+                ZERO_VALUE
+            FROM TRAY
+            <include refid="whereSql" />
+        ) TB
+        <where>
+            <if test="itemStart > -1">
+                NO BETWEEN (#{itemStart} + 1)
+                       AND (#{itemStart} + #{itemSizePerPage})
+            </if>
+        </where>
+    </select>
+
+    <select id="select" parameterType="com.aos.tray.Tray" resultMap="trayResultMap">
+        SELECT
+            NO,
+            INGREDIENT_NO,
+            ORDER_WEIGHT,
+            ORDER_AMOUNT,
+            ZERO_VALUE
+        FROM TRAY
+        <include refid="whereSql" />
+    </select>
+    
+    <select id="selectAll" resultMap="trayResultMap">
+    	SELECT
+    		NO,
+    		INGREDIENT_NO,
+    		ORDER_WEIGHT,
+    		ORDER_AMOUNT,
+    		ZERO_VALUE
+    	FROM TRAY
+    </select>
+    
+    <select id="selectTrayInfo" parameterType="com.aos.tray.Tray" resultMap="trayInfoResultMap">
+    	SELECT
+    		TRAY.NO,
+    		INGREDIENT.NAME AS INGREDIENT_NAME,
+    		TRAY.ORDER_WEIGHT,
+    		TRAY.ORDER_AMOUNT,
+    		TRAY.ZERO_VALUE
+    	FROM TRAY, INGREDIENT
+    	WHERE TRAY.INGREDIENT_NO = INGREDIENT.NO
+    	AND TRAY.NO = #{no}
+    </select>
+
+    <update id="dmlTray" parameterType="com.aos.tray.Tray">
+        UPDATE TRAY
+        <set>
+        	<if test="ingredientNo != '' and ingredientNo != null">
+        		INGREDIENT_NO = #{ingredientNo},
+        	</if>
+        	<if test="ingredientNo == null">
+        		INGREDIENT_NO = NULL,
+        	</if>
+            <if test="orderWeight != '' and orderWeight != null">
+                ORDER_WEIGHT = #{orderWeight},
+            </if>
+            <if test="orderWeight == null">
+            	ORDER_WEIGHT = NULL,
+            </if>
+            <if test="orderAmount != '' and orderAmount != null">
+                ORDER_AMOUNT = #{orderAmount},
+            </if>
+            <if test="orderAmount == null">
+            	ORDER_AMOUNT = NULL,
+            </if>
+            <if test="zeroValue != '' and zeroValue != null">
+            	ZERO_VALUE = #{zeroValue},
+            </if>
+            <if test="zeroValue == null">
+            	ZERO_VALUE = NULL,
+            </if>
+        </set>
+        WHERE NO = #{no}
+    </update>
+</mapper>

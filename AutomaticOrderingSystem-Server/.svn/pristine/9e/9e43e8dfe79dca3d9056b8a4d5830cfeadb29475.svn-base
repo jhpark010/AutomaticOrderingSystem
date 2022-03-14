@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/application.properties=UTF-8
+encoding//src/main/resources/static/css/led.css=UTF-8
+encoding//src/main/resources/static/js/validate.js=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/errors/500.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/include/footer.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/include/header.jsp=UTF-8
+encoding//src/test/java=UTF-8
+encoding/<project>=UTF-8

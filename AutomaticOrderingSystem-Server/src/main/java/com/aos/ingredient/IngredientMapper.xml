@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aos.ingredient.IngredientMapper">
+    <resultMap id="ingredientResultMap" type="com.aos.ingredient.Ingredient">
+        <result column="NO" property="no" />
+        <result column="NAME" property="name" />
+        <result column="UNIT_WEIGHT" property="unitWeight" />
+        <result column="UNIT_PRICE" property="unitPrice" />
+        <result column="STATUS" property="status" />
+    </resultMap>
+
+    <sql id="whereSql">
+        <where>
+            <if test="no != null and no != ''">
+                AND NO = #{no}
+            </if>
+            <if test="name != null and name != ''">
+                AND NAME = #{name}
+            </if>
+            <if test="unitWeight != null and unitWeight != ''">
+                AND UNIT_WEIGHT = #{unitWeight}
+            </if>
+            <if test="unitPrice != null and unitPrice != ''">
+                AND UNIT_PRICE = #{unitPrice}
+            </if>
+            <if test="status != null and status != ''">
+                AND STATUS = #{status}
+            </if>
+        </where>
+    </sql>
+
+    <select id="count" parameterType="com.aos.ingredient.Ingredient" resultType="int">
+        SELECT COUNT(*)
+        FROM INGREDIENT
+        <include refid="whereSql" />
+    </select>
+
+    <select id="list" parameterType="com.aos.ingredient.Ingredient" resultMap="ingredientResultMap">
+            SELECT    NO
+            		, NAME
+            		, UNIT_WEIGHT
+            		, UNIT_PRICE
+            		, STATUS
+            FROM INGREDIENT
+            <include refid="whereSql" />
+    </select>
+
+    <select id="select" parameterType="com.aos.ingredient.Ingredient" resultMap="ingredientResultMap">
+        SELECT 	  NO
+        		, NAME
+        		, UNIT_WEIGHT
+        		, UNIT_PRICE
+        		, STATUS
+        FROM INGREDIENT
+        <include refid="whereSql" />
+    </select>
+    
+    <select id="selectByHandling" parameterType="com.aos.handling.Handling" resultMap="ingredientResultMap">
+    	SELECT 
+    			INGREDIENT.NO
+    			, INGREDIENT.NAME
+		FROM INGREDIENT, HANDLING
+		WHERE INGREDIENT.NO = ${ingredientNo} 
+			AND HANDLING.SUPPLIER_NO = ${supplierNo}
+			AND HANDLING.MAIN_SUPPLIER_STATUS = ${mainSupplierStatus}
+    </select>
+    
+    <select id="selectByName" parameterType="String" resultMap="ingredientResultMap">
+        SELECT    NO
+        		, NAME
+        		, UNIT_WEIGHT
+        		, UNIT_PRICE
+        		, STATUS
+        FROM INGREDIENT
+        WHERE NAME = #{name}
+        AND STATUS = 'Y'
+    </select>
+    
+    <select id="searchResult" parameterType="com.aos.ingredient.Ingredient" resultMap="ingredientResultMap">
+    	SELECT	NO
+        		, NAME
+        		, UNIT_WEIGHT
+        		, UNIT_PRICE
+        		, STATUS
+         FROM INGREDIENT
+         WHERE NAME LIKE CONCAT('%', #{name}, '%')
+         	AND STATUS = #{status}
+    </select>
+	
+    <insert id="insert" parameterType="com.aos.ingredient.Ingredient">
+        INSERT INTO ingredient (
+            					NAME
+            					, UNIT_WEIGHT
+            					, UNIT_PRICE
+            					, STATUS
+        ) VALUES (
+            #{name}
+            , #{unitWeight}
+            , #{unitPrice}
+            , #{status}
+        )
+    </insert>
+    
+    <update id="updateWithWhere" parameterType="com.aos.ingredient.Ingredient">
+        UPDATE INGREDIENT
+        <set>
+            <if test="name != ''">
+                NAME = #{name},
+            </if>
+            <if test="unitWeight != ''">
+                UNIT_WEIGHT = #{unitWeight},
+            </if>
+            <if test="unitPrice != ''">
+                UNIT_PRICE = #{unitPrice},
+            </if>
+            <if test="status != ''">
+                STATUS = #{status},
+            </if>
+        </set>
+        Where no = ${no}
+    </update>
+    
+    <update id="delete" parameterType="com.aos.ingredient.Ingredient">
+        UPDATE INGREDIENT
+        <set>
+            <if test="status != ''">
+                STATUS = #{status},
+            </if>
+        </set>
+        Where no = ${no}
+    </update>
+
+</mapper>

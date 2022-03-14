@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aos.requestorder.RequestOrderMapper">
+    <resultMap id="requestOrderResultMap" type="com.aos.requestorder.RequestOrder">
+        <result column="ORDER_DATE" property="orderDate" />
+        <result column="SUPPLIER_NO" property="supplierNo" />
+        <result column="INGREDIENT_NO" property="ingredientNo" />
+        <result column="ORDER_AMOUNT" property="orderAmount" />
+        <result column="ORDER_PRICE" property="orderPrice" />
+        <result column="STATUS" property="status" />
+    </resultMap>
+
+    <sql id="whereSql">
+        <where>
+            <if test="orderDate != null and orderDate != ''">
+                AND DATE_FORMAT(ORDER_DATE, '%Y-%m-%d %H:%i:%s') = DATE_FORMAT(#{orderDate}, '%Y-%m-%d %H:%i:%s')
+            </if>
+            <if test="supplierNo != null and supplierNo != ''">
+                AND SUPPLIER_NO = #{supplierNo}
+            </if>
+            <if test="ingredientNo != null and ingredientNo != ''">
+                AND INGREDIENT_NO = #{ingredientNo}
+            </if>
+            <if test="orderAmount != null and orderAmount != ''">
+                AND ORDER_AMOUNT = #{orderAmount}
+            </if>
+            <if test="orderPrice != null and orderPrice != ''">
+                AND ORDER_PRICE = #{orderPrice}
+            </if>
+            <if test="status != null and status != ''">
+                AND STATUS = #{status}
+            </if>
+        </where>
+    </sql>
+
+    <select id="count" parameterType="com.aos.requestorder.RequestOrder" resultType="int">
+        SELECT COUNT(*)
+        FROM REQUEST_ORDER
+        <include refid="whereSql" />
+    </select>
+
+    <select id="list" parameterType="com.aos.requestorder.RequestOrder" resultMap="requestOrderResultMap"> <!-- 파리미터 삭제, 안에 내용 수정 -->
+            SELECT
+                DATE_FORMAT(ORDER_DATE, '%Y-%m-%d %H:%i:%s') as ORDER_DATE ,
+                SUPPLIER_NO,
+                INGREDIENT_NO,
+                ORDER_AMOUNT,
+                ORDER_PRICE,
+                STATUS
+            FROM REQUEST_ORDER
+            <include refid="whereSql" />
+            ORDER BY ORDER_DATE DESC
+    </select>
+
+    <select id="select" parameterType="com.aos.requestorder.RequestOrder" resultMap="requestOrderResultMap">
+        SELECT
+            DATE_FORMAT(ORDER_DATE, '%Y-%m-%d %H:%i:%s') as ORDER_DATE,
+            SUPPLIER_NO,
+            INGREDIENT_NO,
+            ORDER_AMOUNT,
+            ORDER_PRICE,
+            STATUS
+        FROM REQUEST_ORDER
+        <include refid="whereSql" />
+        ORDER BY ORDER_DATE DESC
+    </select>
+    
+    <select id="searchByDate" parameterType="com.aos.requestorder.RequestOrder" resultMap="requestOrderResultMap">
+        SELECT * 
+        FROM REQUEST_ORDER 
+        where DATE_FORMAT(ORDER_DATE, '%Y-%m-%d') = DATE_FORMAT( #{orderDate} , '%Y-%m-%d')
+        ORDER BY ORDER_DATE DESC
+    </select>
+	
+    <insert id="insert" parameterType="com.aos.requestorder.RequestOrder">
+        INSERT INTO REQUEST_ORDER (
+            ORDER_DATE,
+            SUPPLIER_NO,
+            INGREDIENT_NO,
+            ORDER_AMOUNT,
+            ORDER_PRICE,
+            STATUS
+        ) VALUES (
+            DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s'),
+            #{supplierNo},
+            #{ingredientNo},
+            #{orderAmount},
+            #{orderPrice},
+            #{status}
+        )
+    </insert>
+
+    <update id="update" parameterType="com.aos.requestorder.RequestOrder">
+        UPDATE REQUEST_ORDER
+        <set>
+            <if test="orderDate != '' and orderDate != null">
+                ORDER_DATE = DATE_FORMAT(#{orderDate}, '%Y-%m-%d %H:%i:%s'),
+            </if>
+            <if test="supplierNo != '' and supplierNo != null">
+                SUPPLIER_NO = #{supplierNo},
+            </if>
+            <if test="ingredientNo != '' and ingredientNo != null">
+                INGREDIENT_NO = #{ingredientNo},
+            </if>
+            <if test="orderAmount != '' and orderAmount != null">
+                ORDER_AMOUNT = #{orderAmount},
+            </if>
+            <if test="orderPrice != '' and orderPrice != null">
+                ORDER_PRICE = #{orderPrice},
+            </if>
+            <if test="status != '' and status != null">
+                STATUS = #{status},
+            </if>
+        </set>
+        WHERE  SUPPLIER_NO = #{supplierNo} AND INGREDIENT_NO = #{ingredientNo} AND STATUS = 'O'
+    </update>
+
+    <delete id="delete" parameterType="com.aos.requestorder.RequestOrder">
+        DELETE FROM REQUEST_ORDER
+        <include refid="whereSql" />
+    </delete>
+</mapper>
